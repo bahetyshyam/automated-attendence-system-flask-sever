@@ -5,6 +5,7 @@ import pathlib
 
 def extract_faces(imageFileName):
     currentDirectory = pathlib.Path(__file__).parent.absolute()
+    parentDirectory = os.path.dirname(currentDirectory)
     imagePath = os.path.join(currentDirectory, imageFileName)
 
 
@@ -22,7 +23,10 @@ def extract_faces(imageFileName):
 
     print("[INFO] Found {0} Faces!".format(len(faces)))
 
-    os.chdir(os.path.join(currentDirectory,'detected_faces'))
+    if not os.path.exists(os.path.join(parentDirectory,'detected_faces')):
+        os.makedirs(os.path.join(parentDirectory,'detected_faces'))
+
+    os.chdir(os.path.join(parentDirectory,'detected_faces'))
 
     for (x, y, w, h) in faces:
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
