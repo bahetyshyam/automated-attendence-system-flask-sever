@@ -28,11 +28,13 @@ def extract_faces(imageFileName):
 
     os.chdir(os.path.join(parentDirectory,'detected_faces'))
 
+    i = 1
     for (x, y, w, h) in faces:
-        cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
         roi_color = image[y:y + h, x:x + w] 
-        print("[INFO] Object found. Saving locally.") 
-        cv2.imwrite(str(w) + str(h) + '_faces.jpg', roi_color)
+        print("[INFO] Object found. Saving locally.")
+        cv2.imwrite(str(i) + '_faces.jpg', roi_color)# for storing each individual face detected
+        cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)# for drawing a rectangle around each individual face
+        i += 1  
 
 
     os.chdir(currentDirectory)

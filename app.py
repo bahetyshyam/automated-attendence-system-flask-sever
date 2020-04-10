@@ -42,6 +42,7 @@ def getAttendence():
         extract_faces(filename) #perform face detection using opencv
 
         url = 'http://max-image-resolution-enhancer.max.us-south.containers.appdomain.cloud/model/predict'
+        # url = 'http://localhost:5000/model/predict'
         detected_faces_directory = os.path.join(current_directory,'detected_faces')
         enhanced_faces_directory = os.path.join(current_directory,'enhanced_faces')
 
@@ -65,4 +66,4 @@ def getAttendence():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port= 8080)
