@@ -3,3 +3,5 @@ venv
 face_scrapper/__pycache__
 deteced_faces
 enhanced_faces
+training_set
+sex
