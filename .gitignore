@@ -5,3 +5,4 @@ deteced_faces
 enhanced_faces
 training_set
 __pycache__
+.env
