@@ -1,7 +1,7 @@
 .vscode
 venv
 face_scrapper/__pycache__
-deteced_faces
+detected_faces
 enhanced_faces
 training_set
 __pycache__

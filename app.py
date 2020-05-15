@@ -1,4 +1,5 @@
 from flask import Flask, request, flash, redirect, jsonify
+from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import os
 import pathlib
@@ -50,6 +51,7 @@ def allowed_file(filename):
 
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/', methods=['GET'])
