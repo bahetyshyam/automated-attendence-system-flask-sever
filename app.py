@@ -221,6 +221,7 @@ def getAllAttendance():
             item['_id'] = str(item['_id'])
             attendance.append(item)
         return jsonify({
+            "success" : True,
             "attendance": attendance
         })
     except pymongo.errors.PyMongoError:
