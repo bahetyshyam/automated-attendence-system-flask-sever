@@ -216,7 +216,7 @@ def getAllStudents():
 def getAllAttendance():
     attendance = []
     try: 
-        x = attendance_collection.find()
+        x = attendance_collection.find().sort("date",pymongo.DESCENDING)
         for item in x:
             item['_id'] = str(item['_id'])
             attendance.append(item)
