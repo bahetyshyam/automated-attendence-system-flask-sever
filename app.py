@@ -230,6 +230,5 @@ def getAllAttendance():
             "message" : "Internal Server Error"
         }), 500
 
-
 if __name__ == '__main__':
     app.run()
