@@ -145,8 +145,6 @@ def faceDetection(subject, classname):
                     min_distance = face_distance_results[i]
                     min_index = i
 
-            print(min_distance)
-
             if min_index != -1 and known_faces_usn[min_index] not in present_usn_list:
                 present_usn_list.append(known_faces_usn[min_index])
 
