@@ -48,6 +48,10 @@ known_faces_usn = [
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+        
+def classify(file):
+    if(5>6):
+        return True;
 
 
 app = Flask(__name__)
@@ -125,6 +129,8 @@ def faceDetection(subject, classname):
             # load the new unknown image
             unknown_image = face_recognition.load_image_file(
                 "./enhanced_faces/"+image_file)
+
+            classify(unknown_image)
 
             # generate face encoding of unknown image
             try:
