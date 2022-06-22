@@ -19,7 +19,7 @@ Jinja2==2.11.1
 lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
-numpy==1.18.4
+numpy==1.22.0
 opencv-contrib-python==4.2.0.34
 opencv-python==4.2.0.34
 opencv-utils==0.0.2
